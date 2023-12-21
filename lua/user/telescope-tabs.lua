@@ -6,7 +6,7 @@ local M = {
 
 function M.config()
   require("telescope-tabs").setup {
-    show_preview = false,
+    show_preview = true,
     close_tab_shortcut_i = "<C-d>", -- if you're in insert mode
     close_tab_shortcut_n = "dd", -- if you're in normal mode
     entry_formatter = function(tab_id, buffer_ids, file_names, file_paths, is_current)

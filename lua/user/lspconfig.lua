@@ -114,17 +114,17 @@ function M.config()
     lspconfig[server].setup(opts)
   end
 
-lspconfig.gopls.setup({
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
+  lspconfig.gopls.setup {
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+        gofumpt = true,
       },
-      staticcheck = true,
-      gofumpt = true,
     },
-  },
-})
+  }
 end
 
 return M
