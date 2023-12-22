@@ -1,5 +1,5 @@
 local keymap = vim.keymap.set
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = false }
 
 keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
@@ -25,6 +25,10 @@ keymap("n", "g#", "g#zz", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+keymap("n", "<C-n>", "<cmd>$tabnew<cr>", opts)
+keymap("n", "<S-Right>", "<cmd>tabn<cr>", opts)
+keymap("n", "<S-Left>", "<cmd>tabp<cr>", opts)
 
 keymap("x", "p", [["_dP]])
 

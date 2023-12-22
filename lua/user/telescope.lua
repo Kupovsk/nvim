@@ -21,8 +21,37 @@ function M.config()
       color_devicons = true,
       set_env = { ["COLORTERM"] = "truecolor" },
       sorting_strategy = nil,
-      layout_strategy = nil,
-      layout_config = {},
+      layout_strategy = "bottom_pane",
+      layout_config = {
+        bottom_pane = {
+          height = 25,
+          preview_cutoff = 120,
+          prompt_position = "top",
+        },
+        center = {
+          height = 0.4,
+          preview_cutoff = 40,
+          prompt_position = "top",
+          width = 0.5,
+        },
+        cursor = {
+          height = 0.9,
+          preview_cutoff = 40,
+          width = 0.8,
+        },
+        horizontal = {
+          height = 0.9,
+          preview_cutoff = 120,
+          prompt_position = "bottom",
+          width = 0.8,
+        },
+        vertical = {
+          height = 1.3,
+          preview_cutoff = 120,
+          prompt_position = "bottom",
+          width = 1.3,
+        },
+      },
       vimgrep_arguments = {
         "rg",
         "--color=never",
@@ -36,7 +65,7 @@ function M.config()
 
       mappings = {
         i = {
-          ["<C-n>"] = actions.cycle_history_next,
+          -- ["<C-n>"] = actions.cycle_history_next,
           ["<C-p>"] = actions.cycle_history_prev,
 
           ["<C-j>"] = actions.move_selection_next,
