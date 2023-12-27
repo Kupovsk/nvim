@@ -32,6 +32,8 @@ keymap("n", "<S-Left>", "<cmd>tabp<cr>", opts)
 
 keymap("x", "p", [["_dP]])
 
+keymap("n", "<C-\\>", "<cmd>NvimTreeToggle<CR>", opts)
+
 vim.cmd [[:amenu 10.100 mousemenu.Goto\ Definition <cmd>lua vim.lsp.buf.definition()<CR>]]
 vim.cmd [[:amenu 10.110 mousemenu.References <cmd>lua vim.lsp.buf.references()<CR>]]
 -- vim.cmd [[:amenu 10.120 mousemenu.-sep- *]]
