@@ -31,11 +31,11 @@ function M.config()
       group_empty = false,
       highlight_git = false,
       full_name = false,
-      highlight_opened_files = "none",
+      highlight_opened_files = "all",
       root_folder_label = ":t",
       indent_width = 2,
       indent_markers = {
-        enable = false,
+        enable = true,
         inline_arrows = true,
         icons = {
           corner = "└",
